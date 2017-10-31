@@ -85,9 +85,9 @@ RMData12$If_RMG <- ifelse(RMData12$Mode == "RMG", 1, 0)
 
 #Feature 6 (基础练习时间，是否写邮件，是否装饰小屋)
 RMData12$Basic_practice_time <- ifelse(RMData12$If_theory==1, RMData12$TimeUsage, 0)
-# Prop_basicpractice_time = sum(Basic_practice_time) / sum(TimeUsage)在整合阶段创建
-# Prop_theory_actions = sum(If_basic_practice) / count=n() 在整合阶段创建
-# 邮件暂时忽略
+ #Prop_basicpractice_time = sum(Basic_practice_time) / sum(TimeUsage)在整合阶段创建
+ #Prop_theory_actions = sum(If_basic_practice) / count=n() 在整合阶段创建
+ #邮件暂时忽略
 #RMData12$If_mail <- ifelse(RMData12$Mode == "MAILBOX", 1, 0)
 #RMData12$Mail_time <- ifelse(RMData12$If_mail == "1", RMData12$TimeUsage, 0)
 #RMData12$Mail_30s <- ifelse(RMData12$If_mail == "1" & RMData12$Mail_time >= 30, 1, 0) #是否超过30s
