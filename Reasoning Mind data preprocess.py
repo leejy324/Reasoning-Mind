@@ -298,10 +298,6 @@ def Construct_BKTset(RMData):
     
 def BKT_Calculator(TEST_Slip):
     TEST_Slip = pd.merge(TEST_Slip, Skill_parameters, how = 'left')
-    TEST_Slip['L0'] = TEST_Slip['L0'].fillna(TEST_Slip['L0'].mean())
-    TEST_Slip['G'] = TEST_Slip['G'].fillna(TEST_Slip['G'].mean())
-    TEST_Slip['S'] = TEST_Slip['S'].fillna(TEST_Slip['S'].mean())
-    TEST_Slip['T'] = TEST_Slip['T'].fillna(TEST_Slip['T'].mean())
     TEST_Slip.Results = TEST_Slip.Results.astype(int)
     Ln_1 = [0]*len(TEST_Slip)
     Ln_1_Result = [0]*len(TEST_Slip)
